@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[513],{4513:t=>{t.exports=JSON.parse('{"socialData":[{"network":"linkedin","href":"https://www.linkedin.com/in/saurabhhitendrapatel/"},{"network":"github","href":"https://github.com/saurabhp94/"},{"network":"email","href":"mailto:contactsaurabhpatel@gmail.com"}]}')}}]);

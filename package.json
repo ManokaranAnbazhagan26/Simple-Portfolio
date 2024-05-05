@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://saurabhp94.github.io/Portfolio-Using-React",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -43,7 +44,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +70,7 @@
     "@babel/plugin-proposal-export-default-from": "^7.24.1",
     "@babel/plugin-syntax-export-default-from": "^7.24.1",
     "css-loader": "^7.1.1",
+    "gh-pages": "^6.1.1",
     "style-loader": "^4.0.0"
   }
 }
