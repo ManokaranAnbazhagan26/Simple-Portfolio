@@ -1,0 +1,77 @@
+{
+    "projects": [
+      {
+        "image": "images/projects/portfolio-poster.png",
+        "title": "Build and Deploy a Simple Guestbook App",
+        "bodyText": "- Built a simple guestbook application using front-end technologies like HTML, CSS, and JavaScript.\n- Packaged the application using Docker, a popular platform for developing, shipping, and running applications.\n- Deployed the application using Kubernetes, an open-source platform for automating deployment, scaling, and management of containerized applications.\n- Managed the application using OpenShift, a family of containerization software developed by Red Hat.",
+        "links": [
+          {
+            "text": "GitHub",
+            "href": "https://github.com/yourusername/guestbook-app"
+          }
+        ],
+        "tags": ["HTML", "CSS", "JavaScript", "Docker", "Kubernetes", "OpenShift"]
+      },
+      {
+        "image": "images/projects/portfolio-poster.png",
+        "title": "Deploy Guestbook App from the OpenShift Internal Registry",
+        "bodyText": "- Deployed the guestbook application from the OpenShift Internal Registry, a built-in container image registry that is deployed by default with OpenShift.\n- Managed the application lifecycle, including updates and rollbacks, using OpenShift’s built-in features.\n- Ensured the application is scalable and can handle requests efficiently.",
+        "links": [
+          {
+            "text": "GitHub",
+            "href": "https://github.com/yourusername/openshift-guestbook"
+          }
+        ],
+        "tags": ["OpenShift", "Scalability"]
+      },
+      {
+        "image": "images/projects/portfolio-poster.png",
+        "title": "Microservices based Serverless Application",
+        "bodyText": "- Designed and architected a full-stack application using microservices.\n- Developed both front-end and back-end components of the application using technologies such as HTML, CSS, JavaScript, and React.\n- Implemented user management and authentication mechanisms to secure the application.\n- Developed backend services and established communication with databases.\n- Utilized CI/CD pipelines for continuous integration and deployment of changes.\n- Deployed serverless applications on Code Engine.\n- Created and invoked RESTful microservices.\n- Deployed the entire solution on the cloud using Kubernetes.",
+        "links": [
+          {
+            "text": "GitHub",
+            "href": "https://github.com/yourusername/microservices-serverless-app"
+          }
+        ],
+        "tags": ["Microservices", "HTML", "CSS", "JavaScript", "React", "CI/CD", "Serverless", "Code Engine", "RESTful", "Kubernetes"]
+      },
+      {
+        "image": "images/projects/portfolio-poster.png",
+        "title": "Part 1: Front-end Enhancement",
+        "bodyText": "- Enhanced the user interface of a web application using React, a popular front-end library.\n- Implemented new features and improved the overall user experience.\n- Applied best practices for component design and state management.",
+        "links": [
+          {
+            "text": "GitHub",
+            "href": "https://github.com/yourusername/frontend-enhancement"
+          }
+        ],
+        "tags": ["React", "UI/UX", "Component Design", "State Management"]
+      },
+      {
+        "image": "images/projects/portfolio-poster.png",
+        "title": "Part 2: Car Inventory Backend Service",
+        "bodyText": "- Developed a backend service for a car inventory application using Node.js and Express.\n- Implemented CRUD (Create, Read, Update, Delete) operations to interact with the car inventory.\n- Ensured the backend service is scalable and can handle requests efficiently.",
+        "links": [
+          {
+            "text": "GitHub",
+            "href": "https://github.com/yourusername/car-inventory-backend"
+          }
+        ],
+        "tags": ["Node.js", "Express", "CRUD", "Scalability"]
+      },
+      {
+        "image": "images/projects/portfolio-poster.png",
+        "title": "Part 3: Front-end Development for Car Inventory Service",
+        "bodyText": "- Connected the front-end application with the backend service, creating a full-stack application.\n- Utilized React for front-end development to interact with the car inventory backend service.\n- Ensured seamless data flow between the front-end and the backend, providing a smooth user experience.",
+        "links": [
+          {
+            "text": "GitHub",
+            "href": "https://github.com/yourusername/frontend-car-inventory"
+          }
+        ],
+        "tags": ["React", "Full Stack", "User Experience"]
+      }
+    ]
+  }
+  
