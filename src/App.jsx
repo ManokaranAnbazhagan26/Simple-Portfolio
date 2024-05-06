@@ -17,7 +17,7 @@ function App() {
       <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
         <GlobalStyles />
         <div className="App">
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <MainApp />
             <AnimatedCursor />
           </BrowserRouter>
