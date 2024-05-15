@@ -42,4 +42,7 @@ export const lightTheme = {
     bsPrimaryVariant: 'dark',
     bsSecondaryVariant: 'light',
     socialIconBgColor: '#fefefe',
+
+    
+
   };

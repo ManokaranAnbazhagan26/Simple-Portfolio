@@ -8,12 +8,13 @@ import Header from './Header';
 import FallbackSpinner from './FallbackSpinner';
 import endpoints from '../constants/endpoints';
 import '../css/education.css';
+import "../css/darkbackground.css";
+// import 'react-chrono/dist/react-chrono.esm.css';
 
 function Education(props) {
   const theme = useContext(ThemeContext);
   const { header } = props;
   const [data, setData] = useState(null);
-  const [width, setWidth] = useState('50vw');
 
   useEffect(() => {
     fetch(endpoints.education, {
@@ -22,49 +23,43 @@ function Education(props) {
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.error('Error fetching data:', err));
-
-
-    if (window?.innerWidth < 576) {
-      setWidth('90vw');
-    } else if (window?.innerWidth >= 576 && window?.innerWidth < 768) {
-      setWidth('90vw');
-    } else if (window?.innerWidth >= 768 && window?.innerWidth < 1024) {
-      setWidth('75vw');
-    } else {
-      setWidth('50vw');
-    }
   }, []);
 
   return (
     <div id="/education">
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
       <Header title={header} />
       {data ? (
-        <div style={{ width }} className="section-content-container">
-          <Container>
-            <Fade>
+        <Container style={{ height: '60vh' }}>
+          <Fade>
+            <div>
               <Chrono
-                hideControls
+                items={data.education}
+                mode="VERTICAL_ALTERNATING"
                 allowDynamicUpdate
                 useReadMore={false}
-                items={data.education}
-                cardHeight={250}
-                mode="HORIZONTAL"
                 theme={{
                   primary: theme.accentColor,
-                  secondary: theme.accentColor,
-                  cardBgColor: theme.chronoTheme.cardBgColor,
-                  cardForeColor: theme.chronoTheme.cardForeColor,
-                  titleColor: theme.chronoTheme.titleColor,
+                  cardBgColor: theme.cardBgColor,
+                  cardForeColor: theme.cardForeColor,
+                  cardSubtitleColor: theme.chronoTheme.cardSubtitleColor,
+                  titleColor: theme.titleColor,
+                  titleColorActive: theme.chronoTheme.titleColorActive,
                 }}
+                iconSrc={(icon) => icon.src}
               />
-            </Fade>
-          </Container>
-        </div>
-      ) : <FallbackSpinner /> }
+            </div>
+          </Fade>
+        </Container>
+      ) : (
+        <FallbackSpinner />
+      )}
     </div>
   );
-  
 }
+
 Education.propTypes = {
   header: PropTypes.string.isRequired,
 };

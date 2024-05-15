@@ -33,7 +33,7 @@
         {
             "component": "Contact",
             "path": "/contact",
-            "headerTitle": "Contact"
+            "headerTitle": "Contact Me"
         }
     ]
 }

@@ -64,7 +64,8 @@
         height: unset;
         position: static;
         margin-top: unset;
-        display: flex;
+        /* display: flex; */
+        display: none;
         flex-direction: row-reverse;
         justify-content: center;
         padding: 40px 0;

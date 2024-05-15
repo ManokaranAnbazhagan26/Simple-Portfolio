@@ -8,6 +8,7 @@ import Header from './Header';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
 import '../css/experience.css';
+import "../css/darkbackground.css";
 
 function Experience(props) {
   const theme = useContext(ThemeContext);
@@ -53,10 +54,13 @@ function Experience(props) {
 
   return (
     <div id="/experience">
+    <div id="stars" />
+    <div id="stars2" />
+    <div id="stars3" />
       <Header title={header} />
       {data ? (
         <div className="section-content-container">
-          <Container style={{ height: '90vh' }}>
+          <Container style={{ height: '70vh' }}>
             <div className="timeline-container">
               <Timeline lineColor={theme.timelineLineColor}>
                 {data.map((item, index) => (

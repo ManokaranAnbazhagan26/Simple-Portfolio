@@ -9,6 +9,8 @@ import MainApp from './MainApp';
 import GlobalStyles from './theme/GlobalStyles';
 import { lightTheme, darkTheme } from './theme/themes';
 import AnimatedCursor from './components/AnimatedCursor';
+
+
 function App() {
   
   const darkMode = useDarkMode(true);

@@ -27,6 +27,7 @@ const Projects = (props) => {
   const theme = useContext(ThemeContext);
   const { header } = props;
   const [data, setData] = useState(null);
+  
 
   useEffect(() => {
     fetch(endpoints.projects, {
@@ -36,23 +37,78 @@ const Projects = (props) => {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
+
+  const responsive = [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ];
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block",
+        background: "#ddd", borderRadius: "50%" }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block",
+        background: "#ddd", borderRadius: "50%" }}
+        onClick={onClick}
+      />
+    );
+  }
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 2,
     centerMode: true,
     centerPadding: '60px',
     initialSlide: 1,
+    responsive,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    appendDots: dots => (
+      <div
+        style={{
+          ...styles,
+          backgroundColor: "#ddd",
+          borderRadius: "10px",
+          padding: "1px",
+        }}>
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+      )
   };
-  
 
   return (
     <div id="/projects">
       <Header title={header} />
       {data ? (
-        <div  className="projects-container">
+        <div className="projects-container">
           <Container style={styles.containerStyle}>
             <div style={styles.sliderContainerStyle}>
               <Slider {...settings}>
@@ -79,3 +135,4 @@ Projects.propTypes = {
 };
 
 export default Projects;
+

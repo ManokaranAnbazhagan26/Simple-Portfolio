@@ -1,0 +1,36 @@
+{
+    "certifications": [
+        {
+            "title": "Foundation of Project Management",
+            "image": "./images/Google Project Management_page-0001.jpg",
+            "bodyText": "Google - 2021", 
+        
+            "credentialUrl": "https://coursera.org/verify/professional-cert/6576MP43QQ29"
+        },
+        {
+            "title": "Meta Front-End Developer",
+            "image": "./images/Front-End Developer Specialization_page-0001.jpg",
+            "bodyText": "Meta - 2024",
+        
+            "credentialUrl": "https://coursera.org/verify/professional-cert/UCQH3RZSYV9U"
+        },
+        {
+            "title": "IBM Full Stack Software Developer Professional Certificate",
+            "image": "./path-to-your-image.jpg",
+            "bodyText": "IBM - 2024",
+            "credentialUrl": "https://www.your-credential-url.com"
+        },
+        {
+            "title": "Google Advanced Data Analytics",
+            "image": "./images/Google Advanced Data Analytics Professional Certificate_page-0001.jpg",
+            "bodyText": "Google - 2024",
+            "credentialUrl": "https://coursera.org/verify/professional-cert/KRU35G3L47H9"
+        },
+        {
+            "title": "Fundamentals of AI & ML: Introduction to Artificial Intelligence",
+            "image": "./images/Fundamentals of AI & ML_ Introduction to Artificial Intelligence_page-0001.jpg",
+            "bodyText": "Skillsoft - 2024",
+            "credentialUrl": "https://www.your-credential-url.com"
+        }
+    ]
+}

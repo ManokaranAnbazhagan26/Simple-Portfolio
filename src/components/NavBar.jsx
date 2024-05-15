@@ -6,11 +6,9 @@ import ThemeToggler from './ThemeToggler';
 
 const ExternalNavLink = styled.a`
   color: ${(props) => props.theme.navbarTheme.linkColor};
-
   &:hover {
     color: ${(props) => props.theme.navbarTheme.linkHoverColor};
   }
-
   &::after {
     background-color: ${(props) => props.theme.accentColor};
   }
@@ -19,15 +17,12 @@ const ExternalNavLink = styled.a`
 const InternalNavLink = styled.a`
   color: ${(props) => props.theme.navbarTheme.linkColor};
   cursor: pointer;
-
   &:hover {
     color: ${(props) => props.theme.navbarTheme.linkHoverColor};
   }
-
   &::after {
     background-color: ${(props) => props.theme.accentColor};
   }
-
   &.navbar__link--active {
     color: ${(props) => props.theme.navbarTheme.linkActiveColor};
   }
@@ -37,8 +32,7 @@ const NavBar = () => {
   const theme = useContext(ThemeContext);
   const [data, setData] = useState(null);
   const [expanded, setExpanded] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-
+  const [activeLink, setActiveLink] = useState('');
   const navbarRef = useRef(null);
   const prevScrollPos = useRef(window.pageYOffset);
 
@@ -46,16 +40,29 @@ const NavBar = () => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const visible = prevScrollPos.current > currentScrollPos;
-
       if (navbarRef.current) {
         navbarRef.current.style.transform = visible ? 'translateY(0)' : 'translateY(-200px)';
       }
-
       prevScrollPos.current = currentScrollPos;
+
+      // Find the section in view
+      const sections = document.querySelectorAll('div[id]');
+      let activeSection = '';
+      for (const section of sections) {
+        if (section && section.getBoundingClientRect) {
+          const sectionTop = section.getBoundingClientRect().top + window.pageYOffset - 100;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          const isInViewport = currentScrollPos >= sectionTop && currentScrollPos <= sectionBottom;
+          if (isInViewport) {
+            activeSection = section.id;
+            break;
+          }
+        }
+      }
+      setActiveLink(activeSection);
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -70,12 +77,14 @@ const NavBar = () => {
       .catch((err) => console.error('NavBar fetch error:', err));
   }, []);
 
-  const handleClick = (e, sectionId, index) => {
+  const handleClick = (e, sectionId) => {
     e.preventDefault();
     const section = document.getElementById(sectionId);
-    section.scrollIntoView({ behavior: 'smooth', block: "start" });
-    setExpanded(false);
-    setActiveIndex(index);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setExpanded(false);
+      setActiveLink(sectionId);
+    }
   };
 
   return (
@@ -89,15 +98,12 @@ const NavBar = () => {
       expanded={expanded}
     >
       <Container>
-        <Navbar.Toggle
-          aria-controls="responsive-navbar-nav"
-          onClick={() => setExpanded(!expanded)}
-        />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(!expanded)} />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto" />
           <Nav>
             {data &&
-              data.sections?.map((section, index) =>
+              data.sections?.map((section) =>
                 section?.type === 'link' ? (
                   <ExternalNavLink
                     key={section.title}
@@ -113,8 +119,8 @@ const NavBar = () => {
                 ) : (
                   <InternalNavLink
                     key={section.title}
-                    onClick={(e) => handleClick(e, section.href, index)}
-                    className={`navbar__link ${activeIndex === index ? 'navbar__link--active' : ''}`}
+                    onClick={(e) => handleClick(e, section.href)}
+                    className={`navbar__link ${activeLink === section.href ? 'navbar__link--active' : ''}`}
                     theme={theme}
                   >
                     {section.title}
