@@ -4,6 +4,7 @@ import { Container, Row, Col, Form, Button, Modal } from 'react-bootstrap'; // I
 import Fade from 'react-reveal';
 import PropTypes from 'prop-types';
 import { ThemeContext } from 'styled-components';
+import styled from 'styled-components';
 
 function Contact(props) {
   const [name, setName] = useState('');
@@ -69,6 +70,17 @@ function Contact(props) {
       setMessageTouched(false);
     }
   };
+
+  const StyledModal = styled(Modal)`
+  .modal-content {
+    background-color: ${props => props.theme.cardFooterBackground};
+    color: ${props => props.theme.textColor};
+  }
+  .modal-header,
+  .modal-footer {
+    border-color: ${props => props.theme.cardBorderColor};
+  }
+`;
 
   const validateForm = () => {
     // Add form validation logic here
@@ -165,8 +177,7 @@ function Contact(props) {
             </Col>
           </Row>
         </Fade>
-      </Container>
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+      </Container><StyledModal show={showModal} onHide={() => setShowModal(false)}>
         <Modal.Header closeButton>
           <Modal.Title>Form Submission Status</Modal.Title>
         </Modal.Header>
@@ -176,7 +187,7 @@ function Contact(props) {
             Close
           </Button>
         </Modal.Footer>
-      </Modal>
+      </StyledModal>
       
     </div>
   );
