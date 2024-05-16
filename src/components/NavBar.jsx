@@ -1,3 +1,4 @@
+// NavBar.js
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import React, { useEffect, useState, useContext, useRef } from 'react';
 import styled, { ThemeContext } from 'styled-components';
@@ -40,9 +41,12 @@ const NavBar = () => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const visible = prevScrollPos.current > currentScrollPos;
+
       if (navbarRef.current) {
         navbarRef.current.style.transform = visible ? 'translateY(0)' : 'translateY(-200px)';
+        navbarRef.current.style.webkitTransform = visible ? 'translateY(0)' : 'translateY(-200px)';
       }
+
       prevScrollPos.current = currentScrollPos;
 
       // Find the section in view

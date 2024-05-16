@@ -30,7 +30,7 @@ function Certifications(props) {
       {data ? (
         <div className="certifications-container">
           <Container
-            style={{ height: '60vh', width: '100vw', overflowY: 'scroll', overflowX: 'hidden' }}>
+            style={{ height: '70vh', width: '100vw', overflowY: 'scroll', overflowX: 'hidden' }}>
             <Row>
               {data.certifications &&
                 data.certifications.map((cert) => (
