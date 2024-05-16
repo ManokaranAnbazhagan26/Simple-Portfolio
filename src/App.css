@@ -164,16 +164,14 @@ section.timeline-card-content div.card-description > p {
   .MainApp {
     margin-top: 6vh;
     margin-bottom: 4rem;
-    margin-left: 3vh;
+    /* margin-left: 3vh; */
+    width: 100vw;
     /* height: auto; */
   }
 
-  .main {
-    height: auto;
-  }
 
   .section-content-container {
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   section.timeline-card-content p.card-title {

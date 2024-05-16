@@ -99,6 +99,7 @@ function Contact(props) {
       <Container
         style={{
           height: '50vh',
+          width: '95vw',
           backgroundColor: theme.cardFooterBackground ,
           borderColor: theme.cardBorderColor,
           display: 'flex',

@@ -29,7 +29,8 @@ function Certifications(props) {
       <Header title={header} />
       {data ? (
         <div className="certifications-container">
-          <Container>
+          <Container
+            style={{ height: '60vh', width: '100vw', overflowY: 'scroll', overflowX: 'hidden' }}>
             <Row>
               {data.certifications &&
                 data.certifications.map((cert) => (

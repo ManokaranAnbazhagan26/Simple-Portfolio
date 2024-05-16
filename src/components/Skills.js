@@ -24,7 +24,8 @@ const Skills = (props) => {
       <Header title={header} />
       {data ? (
         <div className="section-content-container">
-          <Container>
+          <Container
+            style={{ height: '60vh', width: '100vw', overflowY: 'scroll', overflowX: 'hidden' }}>
             <Row>
               {data.skills &&
                 data.skills.map((skill) => (
