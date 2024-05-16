@@ -1,0 +1,36 @@
+.entry .body{
+    margin: 0 0 1em;
+}
+
+.accordion-button {
+  background-color: transparent;
+  color: inherit;
+  padding: 10px;
+  border: none;
+  position: relative;
+  z-index: 5;
+  cursor: pointer; /* Add this line */
+}
+  
+  .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: inherit;
+    box-shadow: none;
+    z-index: 5;
+  }
+  
+  .accordion-body {
+    padding: 20px;
+  }
+
+  .timeline-container {
+    max-height: 700px; /* Adjust the height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc; /* Add a border if desired */
+  }
+
+@media only screen and (max-width: 768px) {
+    .item-title {
+        margin-top: 10px !important;
+    }
+}
