@@ -188,7 +188,6 @@ function Contact(props) {
           </Button>
         </Modal.Footer>
       </StyledModal>
-      
     </div>
   );
 }
