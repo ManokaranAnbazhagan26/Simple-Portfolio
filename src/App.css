@@ -29,7 +29,7 @@
 }
 
 .navbar-custom {
-  font-size: large;
+  font-size: 2vh; /* Adjust the font size using `vh` */
   cursor: default;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .navbar__link::after {
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.3s;
   background: none repeat scroll 0 0;
   content: "";
   display: block;
@@ -60,7 +60,7 @@
 }
 
 .navbar__link--active::after {
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.3s;
   width: 100%;
 }
 
@@ -86,7 +86,8 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0; /* Add padding for sections */
+  padding: 2rem 0;
+  /* Add padding for sections */
 }
 
 .Typewriter {
@@ -94,12 +95,12 @@
 }
 
 .Typewriter__wrapper {
-  font-size: xx-large;
+  font-size: 3vw; /* Adjust the font size using `vw` */
   font-weight: bold;
 }
 
 .Typewriter__cursor {
-  font-size: xx-large;
+  font-size: 3vw; /* Adjust the font size using `vw` */
   font-weight: bold;
 }
 
@@ -108,17 +109,17 @@ section.timeline-card-content {
 }
 
 section.timeline-card-content p.card-title {
-  font-size: 1.5em;
+  font-size: 3vw; /* Adjust the font size using `vw` */
   margin-top: 25px;
 }
 
 section.timeline-card-content p.card-sub-title {
-  font-size: 1.25em;
+  font-size: 2.5vw; /* Adjust the font size using `vw` */
   margin-top: 10px;
 }
 
 section.timeline-card-content div.card-description > p {
-  font-size: 1.1em;
+  font-size: 2vw; /* Adjust the font size using `vw` */
   margin-top: 10px;
   font-weight: 500;
 }
@@ -169,26 +170,95 @@ section.timeline-card-content div.card-description > p {
     /* height: auto; */
   }
 
-
   .section-content-container {
     padding: 0.5rem;
   }
 
   section.timeline-card-content p.card-title {
-    font-size: 1.2em;
+    font-size: 4vw; /* Adjust the font size using `vw` */
   }
 
   section.timeline-card-content p.card-sub-title {
-    font-size: 1em;
+    font-size: 3vw; /* Adjust the font size using `vw` */
   }
 
   section.timeline-card-content div.card-description > p {
-    font-size: 0.9em;
+    font-size: 2.5vw; /* Adjust the font size using `vw` */
   }
 }
 
 .header {
-  font-size: 3em;
+  font-size: 6vw; /* Adjust the font size using `vw` */
   font-weight: bold;
   margin-bottom: 25px;
+}
+
+/* Styles from home.js */
+.nameStyle {
+  font-size: 5vw; /* Adjust the font size using `vw` */
+}
+
+@media (max-width: 768px) {
+  .nameStyle {
+    font-size: 8vw; /* Adjust the font size using `vw` */
+  }
+}
+
+.inlineChild {
+  display: inline-block;
+  font-size: 3vw; /* Adjust the font size using `vw` */
+}
+
+@media (max-width: 768px) {
+  .inlineChild {
+    font-size: 4vw; /* Adjust the font size using `vw` */
+  }
+}
+
+.paragraph {
+  font-size: 1vw; /* Adjust the font size using `vw` */
+  line-height: 1.5;
+  font-family: 'Georgia', serif;
+}
+
+@media (max-width: 768px) {
+  .paragraph {
+    font-size: 3vw; /* Adjust the font size using `vw` */
+    line-height: 1.3;
+  }
+}
+
+.gap {
+  margin-top: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.mainContainer {
+  height: 100%;
+  display: flex;
+  padding: 5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 2rem;
+  }
+}
+
+.profilePic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .profilePic {
+    width: 150px;
+    height: 150px;
+  }
 }

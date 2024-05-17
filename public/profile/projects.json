@@ -37,13 +37,13 @@
         "tags": ["Microservices", "HTML", "CSS", "JavaScript", "React", "CI/CD", "Serverless", "Code Engine", "RESTful", "Kubernetes"]
       },
       {
-        "image": "images/projects/portfolio-poster.png",
+        "image": "./images/Portfolio.gif",
         "title": "Part 1: Front-end Enhancement",
         "bodyText": "- Enhanced the user interface of a web application using React, a popular front-end library.\n- Implemented new features and improved the overall user experience.\n- Applied best practices for component design and state management.",
         "links": [
           {
             "text": "GitHub",
-            "href": "https://github.com/yourusername/frontend-enhancement"
+            "href": "https://github.com/saurabhp94/portfolio-using-react"
           }
         ],
         "tags": ["React", "UI/UX", "Component Design", "State Management"]
