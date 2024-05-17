@@ -9,7 +9,8 @@ import FallbackSpinner from './FallbackSpinner';
 import endpoints from '../constants/endpoints';
 import '../css/education.css';
 import "../css/darkbackground.css";
-// import 'react-chrono/dist/react-chrono.esm.css';
+
+
 
 function Education(props) {
   const theme = useContext(ThemeContext);
@@ -39,7 +40,7 @@ function Education(props) {
                 items={data.education}
                 mode="VERTICAL_ALTERNATING"
                 allowDynamicUpdate
-                useReadMore={false}
+                useReadMore={true}
                 theme={{
                   primary: theme.accentColor,
                   cardBgColor: theme.cardBgColor,
@@ -48,7 +49,6 @@ function Education(props) {
                   titleColor: theme.titleColor,
                   titleColorActive: theme.chronoTheme.titleColorActive,
                 }}
-                iconSrc={(icon) => icon.src}
               />
             </div>
           </Fade>
