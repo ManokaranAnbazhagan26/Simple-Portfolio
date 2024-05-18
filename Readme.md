@@ -21,12 +21,15 @@ If you wish to run the project locally, follow these steps:
    ```bash
    git clone https://github.com/saurabhp94/portfolio-using-react.git
 2. Navigate to the project directory:
+   ```bash
     cd portfolio-using-react
 
-3. Install dependencies:
+4. Install dependencies:
+   ```bash
     npm install
 
-4. Start the development server:
+6. Start the development server:
+   ```bash
     npm start
 
 ## Contributing
