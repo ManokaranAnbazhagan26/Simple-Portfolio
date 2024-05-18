@@ -14,7 +14,8 @@ This portfolio is a reflection of my journey in the world of coding. It includes
 
 ## Getting Started
 
-To view this portfolio, simply visit [https://saurabhp94.github.io/portfolio-using-react/]
+
+To view this portfolio, simply visit ![Portfolio] (https://github.com/saurabhp94/portfolio-using-react/assets/166574015/830d51f7-f7c5-411e-a539-605f77295a34) [https://saurabhp94.github.io/portfolio-using-react/]
 If you wish to run the project locally, follow these steps:
 
 1. Clone the repository:
