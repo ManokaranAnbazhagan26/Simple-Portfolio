@@ -30,14 +30,12 @@
 
 .navbar-custom {
   font-size: 2vh; /* Adjust the font size using `vh` */
-  cursor: default;
 }
 
 .navbar__link {
   margin-left: 0.75em;
   margin-right: 0.75em;
   font-size: 1em;
-  cursor: pointer;
   text-decoration: none;
   letter-spacing: .1em;
   text-indent: .3em;
@@ -134,7 +132,6 @@ section.timeline-card-content div.card-description > p {
     margin-left: 0.4em;
     margin-right: 0.4em;
     font-size: 0.9em;
-    cursor: pointer;
     letter-spacing: .1em;
     text-indent: .2em;
   }

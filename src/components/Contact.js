@@ -83,8 +83,7 @@ function Contact(props) {
 `;
 
   const validateForm = () => {
-    // Add form validation logic here
-    // For now, let's just check that all fields are filled and email is valid
+
     return name.length > 0 && validateEmail(email) && message.length >= 10;
   };
 
