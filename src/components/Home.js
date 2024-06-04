@@ -25,19 +25,20 @@ function Home() {
       <Fade>
         <div id="/" className="mainContainer">
           {data.profilePic && (
-            <img
-              src={data.profilePic.source}
-              alt={data.name}
-              style={{
-                width: data.profilePic.width,
-                height: data.profilePic.height,
-                borderRadius: data.profilePic['border-radius'],
-                objectFit: data.profilePic['object-fit'],
-                marginBottom: data.profilePic['margin-bottom'],
-              }}
-            />
+            <img src="/public/images/" alt="" />
+            // <img
+            //   src={data.profilePic.source}
+            //   alt={"mano"}
+            //   style={{
+            //     width: data.profilePic.width,
+            //     height: data.profilePic.height,
+            //     borderRadius: data.profilePic['border-radius'],
+            //     objectFit: data.profilePic['object-fit'],
+            //     marginBottom: data.profilePic['margin-bottom'],
+            //   }}
+            // />
           )}
-          <h1 className="nameStyle">{data.name}</h1>
+          <h1 className="nameStyle">Manokaran</h1>
           <div style={{ flexDirection: 'row' }}>
             <h2 className="inlineChild">I'm </h2>
             <span>&nbsp;</span>
